@@ -11,9 +11,15 @@ public class Request {
 	private Type type;
 	private int days;
 	private int price;
-	
+
 	public Request() {
-		
+
+	}
+
+	public Request(Transport trans, Food food, int days) {
+		this.food = food;
+		this.trans = trans;
+		this.days = days;
 	}
 
 	public String getPlace() {
@@ -69,6 +75,48 @@ public class Request {
 		return "Request [place=" + place + ", food=" + food + ", trans=" + trans + ", type=" + type + ", days=" + days
 				+ ", price=" + price + "]";
 	}
-	
-	
+
+	public String print() {
+		StringBuilder sb = new StringBuilder();
+
+		sb.append("(");
+
+		if (place != null) {
+			sb.append(place);
+		}
+		if (food != null) {
+			if (sb.length() != 1) {
+				sb.append(", ");
+			}
+			sb.append(food);
+		}
+		if (trans != null) {
+			if (sb.length() != 1) {
+				sb.append(", ");
+			}
+			sb.append(trans);
+		}
+		if (type != null) {
+			if (sb.length() != 1) {
+				sb.append(", ");
+			}
+			sb.append(type);
+		}
+		if (days != 0) {
+			if (sb.length() != 1) {
+				sb.append(", на ");
+			}
+			sb.append(days);
+			sb.append(" дней");
+		}
+		if (price != 0) {
+			if (sb.length() != 1) {
+				sb.append(", не дороже ");
+			}
+			sb.append(price);
+		}
+		sb.append(")");
+
+		return sb.toString();
+	}
 }

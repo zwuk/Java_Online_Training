@@ -18,11 +18,21 @@ public class VoucherList {
 		this.vouchers.remove(voucher);
 	}
 	
-	public void print() {	
+	public List<Voucher> getVouchers() {
+		return vouchers;
+	}
+
+	public void setVouchers(List<Voucher> vouchers) {
+		this.vouchers = vouchers;
+	}
+
+	public void print(String str) {	
+		System.out.println(str);
 		System.out.println("Направление Тип путевки Питаниие       Транспорт   Дней Цена");
 		System.out.println("------------------------------------------------------------");
 		for(Voucher v : vouchers) {
 			v.print();
 		}
 	}
+	
 }
