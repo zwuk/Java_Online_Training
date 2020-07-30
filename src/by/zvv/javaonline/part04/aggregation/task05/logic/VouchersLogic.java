@@ -35,7 +35,8 @@ public class VouchersLogic {
 		VoucherList sortedVouchers = new VoucherList();
 		List<Voucher> list = new ArrayList<Voucher>(vouchers.getVouchers());
 		
-		Comparator<Voucher> comp = (x1, x2) -> x1.getPlace().compareToIgnoreCase(x2.getPlace());
+//		Comparator<Voucher> comp = (x1, x2) -> x1.getPlace().compareToIgnoreCase(x2.getPlace());
+		Comparator<Voucher> comp = Comparator.comparing(Voucher::getPlace);
 		
 		list = list.stream().sorted(comp).collect(Collectors.toList());
 		
@@ -48,6 +49,7 @@ public class VouchersLogic {
 		List<Voucher> list = new ArrayList<Voucher>(vouchers.getVouchers());
 		
 		Comparator<Voucher> comp = (x1, x2) -> x2.getPrice() - x1.getPrice();
+//		Comparator<Voucher> comp = Comparator.comparing(Voucher::getPrice);
 		
 		list = list.stream().sorted(comp).collect(Collectors.toList());
 		
