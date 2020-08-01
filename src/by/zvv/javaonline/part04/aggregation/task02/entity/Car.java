@@ -14,10 +14,10 @@ public class Car {
 	private double petrolResidue = 0;	// Остаток топлива в баке
 
 	public Car() {	
-		wheels.put(Wheels.FrontLeft, new Wheel(Season.Summer, 15));
-		wheels.put(Wheels.FrontRigth, new Wheel(Season.Summer, 15));
-		wheels.put(Wheels.BackLeft, new Wheel(Season.Summer, 15));
-		wheels.put(Wheels.BackRigth, new Wheel(Season.Summer, 15));
+		wheels.put(Wheels.FRONTLEFT, new Wheel(Season.SUMMER, 15));
+		wheels.put(Wheels.FRONTRIGHT, new Wheel(Season.SUMMER, 15));
+		wheels.put(Wheels.BACKLEFT, new Wheel(Season.SUMMER, 15));
+		wheels.put(Wheels.BACKRIGHT, new Wheel(Season.SUMMER, 15));
 		engine = new Engine();
 		name = "Hyundai Solaris";
 		fuelTankCapacity = 45;
@@ -25,10 +25,10 @@ public class Car {
 	}
 
 	public Car(Wheel wheel, Engine engine, String name, int fuelTankCapacity) {
-		wheels.put(Wheels.FrontLeft, wheel);
-		wheels.put(Wheels.FrontRigth, wheel);
-		wheels.put(Wheels.BackLeft, wheel);
-		wheels.put(Wheels.BackRigth, wheel);
+		wheels.put(Wheels.FRONTLEFT, wheel);
+		wheels.put(Wheels.FRONTRIGHT, wheel);
+		wheels.put(Wheels.BACKLEFT, wheel);
+		wheels.put(Wheels.BACKRIGHT, wheel);
 		this.engine = engine;
 		this.name = name;
 		this.fuelTankCapacity = fuelTankCapacity;

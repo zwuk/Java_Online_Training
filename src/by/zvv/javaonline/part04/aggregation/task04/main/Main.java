@@ -33,8 +33,8 @@ public class Main {
 		test.setAddress("any address");
 
 		// Создаем два новых счета для клиента test
-		Account a1 = new Account(Bank.BELVeb, 11000000000L, false, test, 10000);
-		Account a2 = new Account(Bank.AgroPromBank, 12000000000L, true, test, 10000);
+		Account a1 = new Account(Bank.BELVEB, 11000000000L, false, test, 10000);
+		Account a2 = new Account(Bank.AGROPROMBANK, 12000000000L, true, test, 10000);
 
 		test.addAccount(a1); // Добавляем счет в список счетов клиента test
 		test.addAccount(a2); // Добавляем счет в список счетов клиента test

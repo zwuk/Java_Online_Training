@@ -18,7 +18,7 @@ public class Main {
 		CarView carView = new CarView();
 
 		Car car1 = new Car();
-		Car car2 = new Car(new Wheel(Season.Winter, 18), new Engine(3.0, 270, 7.8), "Mercedes CLS 450", 60);
+		Car car2 = new Car(new Wheel(Season.WINTER, 18), new Engine(3.0, 270, 7.8), "Mercedes CLS 450", 60);
 		
 		System.out.println(car1.getName());
 		carAction.fuelUp(car1, 35);
@@ -29,10 +29,10 @@ public class Main {
 		System.out.println();
 
 		carView.showInfoAboutCar(car2);
-		carAction.replaceWheel(car2, new Wheel(Season.Winter, 18), Wheels.BackLeft);
+		carAction.replaceWheel(car2, new Wheel(Season.WINTER, 18), Wheels.BACKLEFT);
 		System.out.println();
 		
-		carAction.replaceWheel(car2, new Wheel(Season.Summer, 19), Wheels.FrontLeft);
+		carAction.replaceWheel(car2, new Wheel(Season.WINTER, 19), Wheels.FRONTLEFT);
 		carView.showInfoAboutCarWheels(car2);
 		carAction.drive(car2, 250);
 		carAction.fuelUp(car2, 100);

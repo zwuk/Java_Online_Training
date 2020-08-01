@@ -8,7 +8,7 @@ public class Wheel {
 
 	public Wheel() {
 		diameter = 15;
-		season = Season.Summer;
+		season = Season.SUMMER;
 	}
 	
 	public Wheel(Season season, int diameter) {

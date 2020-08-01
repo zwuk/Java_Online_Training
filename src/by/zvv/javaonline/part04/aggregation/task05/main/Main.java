@@ -21,14 +21,14 @@ public class Main {
 
 		vl.initVoucherList(vouchers, numberOfVouchers);
 
-		Request request = new Request(Transport.Самолет, Food.Все_включено, 15);
+		Request request = new Request(Transport.САМОЛЕТ, Food.ВСЕ_ВКЛЮЧЕНО, 15);
 
 		vl.sortByPlaceAndPrice(vl.getVouchersByRequest(vouchers, request))
 				.print("Список путевок по запросу:" + request.print() + " с сортировкой по месту назначения и цене");
 
 		System.out.println();
 
-		request.setType(Type.Экскурсии);
+		request.setType(Type.ЭКСКУРСИИ);
 		vl.sortByPrice(vl.getVouchersByRequest(vouchers, request))
 				.print("Список путевок по запросу:" + request.print() + " с сортировкой по цене");
 
@@ -36,8 +36,8 @@ public class Main {
 
 		Request request1 = new Request();
 		request1.setPlace("Франция");
-		request1.setTrans(Transport.Поезд);
-		request1.setType(Type.Шопинг);
+		request1.setTrans(Transport.ПОЕЗД);
+		request1.setType(Type.ШОПИНГ);
 
 		vl.getVouchersByRequest(vouchers, request1).print("Список путевок по запросу:" + request1.print());
 

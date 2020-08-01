@@ -14,8 +14,8 @@ public class CarView {
 		System.out.print(", мощность = " + car.getEngine().getPower() + " л.с.");
 		System.out.println(", расход топлива на 100 км. = " + car.getEngine().getAverageFuelConsumption() + " л.");
 		System.out.print("Комплект колес: диаметр = ");
-		System.out.print(car.getWheels().get(Wheels.BackLeft).getDiameter());
-		System.out.println(", сезонность = " + car.getWheels().get(Wheels.BackLeft).getSeason());	
+		System.out.print(car.getWheels().get(Wheels.BACKLEFT).getDiameter());
+		System.out.println(", сезонность = " + car.getWheels().get(Wheels.BACKLEFT).getSeason());	
 	}
 
 	public void showInfoAboutCarWheels(Car car) {
