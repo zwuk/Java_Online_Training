@@ -9,10 +9,6 @@ public class Account {
 	private boolean active;
 	private double amount;
 
-	public Account() {
-
-	}
-
 	public Account(Client client) {
 		this.client = client;
 	}
