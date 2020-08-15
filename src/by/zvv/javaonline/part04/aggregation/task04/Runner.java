@@ -40,7 +40,7 @@ public class Runner {
 		Client test = new Client("Тестов", "Тест", "Тестович"); // Создаем нового клиента test
 		test.setAddress("any address");
 
-		// Создаем два новых счета для клиента test
+		// Создаем три новых счета для клиента test
 		Account a1 = new Account(test, Bank.BANKBELVEB, 11000000000L, false, 10000);
 		Account a2 = new Account(test, Bank.AGROPROMBANK, 12000000000L, true, 10000);
 		Account a3 = new Account(test, Bank.PRIORBANK, 13000000000L, true, 10000);
