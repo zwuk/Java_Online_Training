@@ -12,6 +12,10 @@ import by.zvv.javaonline.part04.aggregation.task04.logic.SortClient;
 import by.zvv.javaonline.part04.aggregation.task04.logic.TransferAction;
 import by.zvv.javaonline.part04.aggregation.task04.view.ReportAction;
 
+/* Счета. Клиент может иметь несколько счетов в банке. Учитывать возможность блокировки/разблокировки счета. 
+ * Реализовать поиск и сортировку счетов. Вычисление общей суммы по счетам. 
+ * Вычисление суммы по всем счетам, имеющим положительный и отрицательный балансы отдельно.
+ */
 public class Runner {
 
 	public static void main(String[] args) {
