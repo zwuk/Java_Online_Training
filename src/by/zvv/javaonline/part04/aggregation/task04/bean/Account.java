@@ -1,4 +1,4 @@
-package by.zvv.javaonline.part04.aggregation.task04.entity;
+package by.zvv.javaonline.part04.aggregation.task04.bean;
 
 import by.zvv.javaonline.part04.aggregation.task04.enums.Bank;
 
@@ -9,31 +9,31 @@ public class Account {
 	private boolean active;
 	private double amount;
 
-	public Account() {
-
-	}
-
 	public Account(Client client) {
 		this.client = client;
 	}
 
-	public Account(Bank bank, long accountNumber, boolean active, Client client) {
+	public Account(Client client, Bank bank, long accountNumber, boolean active) {
+		this.client = client;
 		this.bank = bank;
 		this.accountNumber = accountNumber;
 		this.active = active;
-		this.client = client;
 	}
 
-	public Account(Bank bank, long accountNumber, boolean active, Client client, double amount) {
+	public Account(Client client, Bank bank, long accountNumber, boolean active, double amount) {
+		this.client = client;
 		this.bank = bank;
 		this.accountNumber = accountNumber;
 		this.active = active;
-		this.client = client;
 		this.amount = amount;
 	}
 
 	public Bank getBank() {
 		return bank;
+	}
+
+	public Client getClient() {
+		return client;
 	}
 
 	public long getAccountNumber() {
@@ -52,6 +52,10 @@ public class Account {
 		this.bank = bank;
 	}
 
+	public void setClient(Client client) {
+		this.client = client;
+	}
+
 	public void setAccountNumber(long accountNumber) {
 		this.accountNumber = accountNumber;
 	}
@@ -62,14 +66,6 @@ public class Account {
 
 	public void setAmount(double amount) {
 		this.amount = amount;
-	}
-
-	public Client getClient() {
-		return client;
-	}
-
-	public void setClient(Client client) {
-		this.client = client;
 	}
 
 	@Override
@@ -113,8 +109,8 @@ public class Account {
 
 	@Override
 	public String toString() {
-		return getClass().getSimpleName() + " [bank=" + bank + ", client=" + client.getSurname() + ", accountNumber="
-				+ accountNumber + ", active=" + active + ", amount=" + amount + "]";
+		return getClass().getSimpleName() + " [bank=" + bank + ", client=" + client + ", accountNumber=" + accountNumber
+				+ ", active=" + active + ", amount=" + amount + "]";
 	}
 
 }

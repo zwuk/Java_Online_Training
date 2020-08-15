@@ -1,4 +1,4 @@
-package by.zvv.javaonline.part04.aggregation.task04.entity;
+package by.zvv.javaonline.part04.aggregation.task04.bean;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,16 +9,16 @@ public class Client {
 	private String firstName;
 	private String secondName;
 	private String address;
-	private List<Account> accountNumbers = new ArrayList<Account>();
+	private List<Account> accountNumbers;
 	private static int counter;
 
-	public Client() {
+	{
+		accountNumbers = new ArrayList<Account>();
 		increaseCounter();
 		id = getCounter();
 	}
 
 	public Client(String surname, String firstName, String secondName) {
-		this();
 		this.surname = surname;
 		this.firstName = firstName;
 		this.secondName = secondName;
@@ -63,15 +63,16 @@ public class Client {
 	public void addAccount(Account account) {
 		this.accountNumbers.add(account);
 	}
-	
-	public void remoteAccount(Account account) {
-		this.accountNumbers.remove(account);
+
+	public boolean remoteAccount(Account account) {
+		return this.accountNumbers.remove(account);
 	}
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
+//		result = prime * result + ((accountNumbers == null) ? 0 : accountNumbers.hashCode());
 		result = prime * result + ((address == null) ? 0 : address.hashCode());
 		result = prime * result + ((firstName == null) ? 0 : firstName.hashCode());
 		result = prime * result + id;
@@ -89,6 +90,11 @@ public class Client {
 		if (getClass() != obj.getClass())
 			return false;
 		Client other = (Client) obj;
+		if (accountNumbers == null) {
+			if (other.accountNumbers != null)
+				return false;
+		} else if (!accountNumbers.equals(other.accountNumbers))
+			return false;
 		if (address == null) {
 			if (other.address != null)
 				return false;

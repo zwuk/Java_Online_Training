@@ -1,26 +1,29 @@
-package by.zvv.javaonline.part04.aggregation.task04.entity;
+package by.zvv.javaonline.part04.aggregation.task04.bean;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 public class Accounts {
 	private Set<Account> accounts;
-
+	
 	public Accounts() {
 		accounts = new HashSet<Account>();
 	}
-
-	public void addAccountToList(Account account) {
-		accounts.add(account);
+	
+	public List<Account> getAccounts(){
+		List<Account> accountList = new ArrayList<Account>(accounts);
+		return accountList;
 	}
-
-	public void removeAccountFromList(Account account) {
+	
+	public void addAccount(Account account) {
+		this.accounts.add(account);
+	}
+	
+	public void remoteAccount(Account account) {
 		account.getClient().remoteAccount(account);
 		accounts.remove(account);
-	}
-
-	public Set<Account> getAccounts() {
-		return accounts;
 	}
 
 	@Override
