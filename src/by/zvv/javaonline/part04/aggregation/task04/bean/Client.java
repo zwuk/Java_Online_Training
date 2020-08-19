@@ -123,7 +123,7 @@ public class Client {
 	@Override
 	public String toString() {
 		return getClass().getSimpleName() + " [id=" + id + ", surname=" + surname + ", firstName=" + firstName
-				+ ", secondName=" + secondName + ", address=" + address + ", accountNumbers=" + accountNumbers + "]";
+				+ ", secondName=" + secondName + ", address=" + address + "]"; // + ", accountNumbers=" + accountNumbers + "]";
 	}
 
 }
