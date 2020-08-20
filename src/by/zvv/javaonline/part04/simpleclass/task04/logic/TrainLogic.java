@@ -11,8 +11,8 @@ import by.zvv.javaonline.part04.simpleclass.task04.entity.Train;
 
 public class TrainLogic {
 
-	private static final int MAX_TRAIN_NUMBER = 1000;
-	private static final int SECONDS_IN_DAY = 86400;
+	private static final int MAX_TRAIN_NUMBER 	= 1000;
+	private static final int SECONDS_IN_DAY 	= 86400;
 
 	// Метод инициализации расписания поездов вариант №1
 	public void initSchedule(Train[] trains) {

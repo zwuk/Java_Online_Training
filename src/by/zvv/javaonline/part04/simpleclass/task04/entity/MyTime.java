@@ -7,10 +7,10 @@ public class MyTime {
 	private int seconds;
 	private int timeInSeconds;
 
-	public static final int SECONDS_IN_DAY = 86400;
-	private static final int HOURS_IN_DAY = 24;
-	private static final int MINUTES_IN_HOUR = 60;
-	private static final int SECONDS_IN_MINUTE = 60;
+	public static final int SECONDS_IN_DAY 		= 86400;
+	private static final int HOURS_IN_DAY 		= 24;
+	private static final int MINUTES_IN_HOUR 	= 60;
+	private static final int SECONDS_IN_MINUTE 	= 60;
 
 	public MyTime() {
 		hours = 0;

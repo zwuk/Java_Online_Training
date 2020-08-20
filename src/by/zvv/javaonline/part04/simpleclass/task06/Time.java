@@ -11,10 +11,10 @@ public class Time {
 	private int seconds;
 	private int timeInSeconds;
 
-	public static final int SECONDS_IN_DAY = 86400;
-	public static final int HOURS_IN_DAY = 24;
-	public static final int MINUTES_IN_HOUR = 60;
-	public static final int SECONDS_IN_MINUTE = 60;
+	public static final int SECONDS_IN_DAY 		= 86400;
+	public static final int HOURS_IN_DAY 		= 24;
+	public static final int MINUTES_IN_HOUR 	= 60;
+	public static final int SECONDS_IN_MINUTE 	= 60;
 
 	public Time() {
 		hours = 0;
