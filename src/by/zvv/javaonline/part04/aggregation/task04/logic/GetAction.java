@@ -32,7 +32,16 @@ public class GetAction {
 	}
 	
 	public List<Account> getNegativeAccounts(List<Account> accounts) {
-		List<Account> list = new ArrayList<Account>(accounts);
+		List<Account> list = new ArrayList<Account>(accounts);		
+//		List<Account> result = new ArrayList<>();
+		
+//		for(Account a : list) {
+//			if(a.getAmount() < 0) {
+//				result.add(a);
+//			}
+//		}
+//		return result;
+		
 		return list.stream().filter(x -> x.getAmount() < 0).collect(Collectors.toList());
 	}
 	
@@ -42,8 +51,16 @@ public class GetAction {
 	}
 	
 	public List<Account> getAllNotActiveAccount(List<Account> accounts) {
-		List<Account> list = new ArrayList<Account>(accounts);
-		list = list.stream().filter(s -> s.isActive() == false).collect(Collectors.toList());
-		return list;
+		List<Account> list = new ArrayList<Account>(accounts);		
+//		List<Account> result = new ArrayList<>();
+//		
+//		for(Account a : list) {
+//			if(a.isActive() == false) {
+//				result.add(a);
+//			}
+//		}
+//		return result;
+		
+		return list.stream().filter(s -> s.isActive() == false).collect(Collectors.toList());
 	}
 }

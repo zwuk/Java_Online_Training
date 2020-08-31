@@ -24,9 +24,11 @@ public class Runner {
 		SortAccount sortAccount = new SortAccount();
 		SortClient sortClient = new SortClient();
 		FindAction findAction = new FindAction();
+		GetAction getAction = new GetAction();
+		
 		TransferAction action1 = new TransferAction(200);
 		TransferAction action2 = new TransferAction(1000);
-		GetAction getAction = new GetAction();
+		
 		Accounts accounts = new Accounts();
 
 		boolean result;

@@ -4,10 +4,10 @@ import by.zvv.javaonline.part04.aggregation.task04.bean.Account;
 
 public class TransferAction {
 	private double transactionAmount;
-	private double percentage;
+	private double percentage; // Процент, взимаемый при переводе, если счета в разных банках
 
 	{
-		percentage = 3;
+		percentage = 3; 
 	}
 
 	public TransferAction(double amount) {

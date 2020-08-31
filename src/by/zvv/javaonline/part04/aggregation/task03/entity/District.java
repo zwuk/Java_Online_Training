@@ -9,25 +9,22 @@ public class District {
 	private City districtCenter;
 	private double area;
 
-	public District() {
+	{
 		cities = new HashSet<City>();
 	}
 
 	public District(String name, double area) {
-		this();
 		this.name = name;
 		this.area = area;
 	}
 
 	public District(String name, Set<City> cities, double area) {
-		this();
 		this.name = name;
 		this.cities = cities;
 		this.area = area;
 	}
 
 	public District(String name, Set<City> cities, City districtCenter, double area) {
-		this();
 		this.name = name;
 		this.cities = cities;
 		this.districtCenter = districtCenter;

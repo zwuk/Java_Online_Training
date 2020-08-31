@@ -14,7 +14,7 @@ import by.zvv.javaonline.part04.aggregation.task03.entity.Region;
 public class CountryLogic {
 	Random random = new Random();
 
-	public District initDistrict(String name, double area, int numberOfCitiesInDistrict) {
+	private District initDistrict(String name, double area, int numberOfCitiesInDistrict) {
 		District newDistrict = new District(name, area);
 		List<City> list;
 		int[] cityNumber;
@@ -29,7 +29,7 @@ public class CountryLogic {
 		return newDistrict;
 	}
 
-	public Region initRegion(String name, int numberOfDistrictsInRegion, int numberOfCitiesInDistrict) {
+	private Region initRegion(String name, int numberOfDistrictsInRegion, int numberOfCitiesInDistrict) {
 		Region newRegion = new Region(name);
 		List<City> list = new ArrayList<>();
 		int[] districtNumber;
@@ -58,7 +58,7 @@ public class CountryLogic {
 		}
 		// Выбираем столицу государства из общего списка городов
 		list = getAllCities(newCountry); 
-		// list = getAllRegionsCenter(newCountry) - если необходимо выбрать столицу из областных центров
+//		list = getAllRegionsCenter(newCountry); //- если необходимо выбрать столицу из областных центров
 		newCountry.setCapital(list.get(random.nextInt(list.size())));
 		return newCountry;
 	}

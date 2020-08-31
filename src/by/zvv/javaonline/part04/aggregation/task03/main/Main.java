@@ -21,7 +21,11 @@ public class Main {
 		List<City> list = new ArrayList<City>();
 		int numberOfRegions;
 		
-		Country country = cl.initCountry("MyCountry", 5, 8, 10);
+		int numberOfRegionsInCountry = 6;
+		int numberOfDistrictsInRegion = 10;
+		int numberOfCitiesInDistrict = 10;
+		
+		Country country = cl.initCountry("MyCountry", numberOfRegionsInCountry, numberOfDistrictsInRegion, numberOfCitiesInDistrict);
 		
 		System.out.println("Столица " + country.getName() + ": " + country.getCapital().getName());
 		numberOfRegions = country.getRegions().size();
@@ -31,9 +35,15 @@ public class Main {
 		for(Region r : country.getRegions()) {
 			list.add(r.getRegionCenter());
 		}
+		
 		System.out.println("Областные центры: ");
-//		list.forEach(s -> cv.print(s));
-		list.forEach(cv::print);
+		
+		for(City c : list) {
+			cv.print(c);
+		}
+		
+//		list.forEach(c -> cv.print(c));
+//		list.forEach(cv::print);
 
 	}
 
