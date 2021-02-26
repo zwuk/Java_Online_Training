@@ -68,9 +68,9 @@ public class Main12 {
 					j++;
 				} else { // При переполнении создаем новый массив и копируем в него прежний
 					int[] a = new int[arrayTemp.length];
-					copyArray(arrayTemp, a);
+					System.arraycopy(arrayTemp, 0, a, 0, arrayTemp.length);
 					arrayTemp = new int[a.length * 2];
-					copyArray(a, arrayTemp);
+					System.arraycopy(a, 0, arrayTemp, 0, a.length);
 					j++;
 				}
 
@@ -86,12 +86,6 @@ public class Main12 {
 	// Метод создания массива при помощи стрима
 	public static int[] createArray2(int k, int n) {
 		return IntStream.rangeClosed(k, n).filter(x -> check(x, k, n)).toArray();
-	}
-
-	public static void copyArray(int[] sourse, int[] destination) {
-		for (int i = 0; i < sourse.length; i++) {
-			destination[i] = sourse[i];
-		}
 	}
 
 	public static void print(int[] arr) {
